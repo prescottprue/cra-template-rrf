@@ -6,7 +6,7 @@
     "create-react-app",
     "template",
     "react-redux-firebase",
-    "firebaes"
+    "firebase"
   ],
   "description": "Create react app template for react-redux-firebase.",
   "main": "template.json",

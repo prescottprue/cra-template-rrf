@@ -1,33 +1,25 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import createStore from './store';
+import configureStore from './store';
 import Home from './Home';
-import registerServiceWorker from './registerServiceWorker';
-import * as config from 'config';
+import { fbConfig, rfConfig } from './config';
 
 // Initialize Firebase instance
-firebase.initializeApp(config.firebase || process.env.REACT_APP_FIREBASE_CONFIG)
+firebase.initializeApp(fbConfig || process.env.REACT_APP_FIREBASE_CONFIG)
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-};
-
-const store = createStore()
-
+const store = configureStore()
 
 function App() {
   return (
     <Provider store={store}>
       <ReactReduxFirebaseProvider
         firebase={firebase}
-        config={config.rfConfig}
+        config={rfConfig}
         dispatch={store.dispatch}
         createFirestoreInstance={createFirestoreInstance}>
         <Home />

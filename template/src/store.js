@@ -1,19 +1,13 @@
 import { createStore, compose } from 'redux'
-import { fbConfig } from './config'
 import rootReducer from './reducer'
 
 export default function configureStore(initialState, history) {
-  const enhancers = []
+  
+  const composeEnhancers = typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;  
 
-  // Dev tools store enhancer
-  const devToolsExtension = window.devToolsExtension;
-  if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension());
-  }
-
-  const createStoreWithMiddleware = compose(
-    ...enhancers
-  )(createStore)
+  const createStoreWithMiddleware = composeEnhancers()(createStore)
 
   const store = createStoreWithMiddleware(rootReducer)
 
