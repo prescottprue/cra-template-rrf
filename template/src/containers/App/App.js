@@ -5,9 +5,9 @@ import { createFirestoreInstance } from 'redux-firestore';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import configureStore from './store';
-import Home from './Home';
-import { fbConfig, rfConfig } from './config';
+import configureStore from '../../store/createStore';
+import { fbConfig, rfConfig } from '../../config';
+import Router from './Router';
 
 // Initialize Firebase instance
 firebase.initializeApp(fbConfig || process.env.REACT_APP_FIREBASE_CONFIG)
@@ -22,7 +22,7 @@ function App() {
         config={rfConfig}
         dispatch={store.dispatch}
         createFirestoreInstance={createFirestoreInstance}>
-        <Home />
+        <Router></Router>
       </ReactReduxFirebaseProvider>
     </Provider>
   );
