@@ -1,8 +1,8 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import Home from './Home'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
 
-export default function createRoutes(store) {
+export default function createRoutes() {
   return (
     <Switch>
       <Route exact path={Home.path} component={Home.component} />

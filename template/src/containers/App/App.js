@@ -10,9 +10,9 @@ import { fbConfig, rfConfig } from '../../config';
 import Router from './Router';
 
 // Initialize Firebase instance
-firebase.initializeApp(fbConfig || process.env.REACT_APP_FIREBASE_CONFIG)
+firebase.initializeApp(fbConfig || process.env.REACT_APP_FIREBASE_CONFIG);
 
-const store = configureStore()
+const store = configureStore();
 
 function App() {
   return (
@@ -21,8 +21,9 @@ function App() {
         firebase={firebase}
         config={rfConfig}
         dispatch={store.dispatch}
-        createFirestoreInstance={createFirestoreInstance}>
-        <Router></Router>
+        createFirestoreInstance={createFirestoreInstance}
+      >
+        <Router />
       </ReactReduxFirebaseProvider>
     </Provider>
   );
