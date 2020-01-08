@@ -12,6 +12,10 @@
   ],
   "rules": {
     "semi": 0,
+    "react/jsx-props-no-spreading": [0, {
+      "custom": "ignore",
+      "html":"ignore"  
+    }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "prettier/prettier": [
       "error", {
