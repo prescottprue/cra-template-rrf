@@ -12,7 +12,14 @@ import Router from './Router';
 // Initialize Firebase instance
 firebase.initializeApp(fbConfig || process.env.REACT_APP_FIREBASE_CONFIG);
 
-const store = configureStore();
+// Store Initialization
+// ------------------------------------
+// eslint-disable-next-line no-underscore-dangle
+const initialState = window.___INITIAL_STATE__ || {
+  firebase: { authError: null },
+};
+
+const store = configureStore(initialState);
 
 function App() {
   return (
