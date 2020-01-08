@@ -21,8 +21,53 @@
   "bugs": {
     "url": "https://github.com/prescottprue/cra-template-rrf/issues"
   },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.0",
+    "react-redux-firebase": "3.0.6",
+    "firebase": "^7.1.0",
+    "redux-firestore": "latest",
+    "react-router-dom": "^5.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "copy": "cp -a src/. template/src && cp -a public/. template/public && cp -a .gitignore template/gitignore && rm -rf template/src/configDummy.js && rm -rf template/src/config.js && cp .eslintrc template/  && cp src/configDummy.js template/src/config.js",
+    "clean": "rm -rf template/src && rm -rf template/public template/gitignore template/.eslintrc",
+    "prepublishOnly": "npm run clean && npm run copy"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  }
 }
