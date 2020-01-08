@@ -24,8 +24,6 @@ function useReminders() {
       })
       .then(() => {
         console.log('reminder added');
-        // toggleDialog()
-        // showSuccess('Reminder added successfully');
       })
       .catch(err => {
         console.error('Error:', err);

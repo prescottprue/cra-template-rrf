@@ -15,8 +15,5 @@
   flex-direction: column;
   align-items: flex-start;
   border-color: #d3d3d3;
-  /* min-width: 40vw; */
   list-style: disc;
-  /* max-width: 70vw; */
 }
-
