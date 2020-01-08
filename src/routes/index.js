@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import LoginRoute from './Login';
 import SignupRoute from './Signup';
 import Home from './Home';
+import RemindersRoute from './Reminders';
 
 export default function createRoutes() {
   return (
@@ -12,6 +13,7 @@ export default function createRoutes() {
       [
         LoginRoute,
         SignupRoute,
+        RemindersRoute,
         /* Add More Routes Here */
       ].map(({ path, component }, index) => (
         // eslint-disable-next-line react/no-array-index-key

@@ -1,0 +1,45 @@
+.li-reminder {
+  width: 100%;
+}
+
+.li-reminder:first-child {
+  padding-top: 0.5rem;
+}
+
+.li-reminder {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 1.5rem;
+  padding-top:  1.5rem;
+}
+
+.li-reminder:last-child {
+  border-bottom: none;
+  padding-bottom: 0.5rem;
+}
+
+.reminder-root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reminder-root > * + * {
+  margin-left: 1rem;
+}
+
+.reminder-text {
+  max-width: 50%;
+  overflow-x: hidden;
+  width: 50%;
+  word-break: break-all;
+}
+
+.reminder-date {
+  font-size: 0.8em;
+}
+
+.delete-icon {
+  color: red;
+}
