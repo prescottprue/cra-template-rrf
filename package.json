@@ -1,15 +1,16 @@
 {
   "name": "cra-template-rrf",
-  "version": "1.0.0",
+  "version": "0.0.2",
+  "description": "Create react app template for react-redux-firebase.",
+  "main": "template.json",
   "keywords": [
     "react",
+    "redux",
     "create-react-app",
     "template",
     "react-redux-firebase",
     "firebase"
   ],
-  "description": "Create react app template for react-redux-firebase.",
-  "main": "template.json",
   "repository": {
     "type": "git",
     "url": "https://github.com/prescottprue/cra-template-rrf.git"
