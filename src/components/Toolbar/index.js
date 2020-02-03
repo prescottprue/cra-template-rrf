@@ -63,7 +63,10 @@ Toolbar.defaultProps = {
 
 Toolbar.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.elementType),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 Toolbar.Left = Left;
