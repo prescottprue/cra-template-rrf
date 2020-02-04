@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../../../statics/logo.svg';
+import { Link } from 'react-router-dom';
+import logo from '../../../../statics/rrf.png';
 import './Home.css';
 
 function HomePage() {
@@ -8,16 +9,19 @@ function HomePage() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to <code>react-redux-firebase</code>.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          Go to
+          <span> </span>
+          <span> </span>
+          <Link className="link-color" to="/reminders">
+            reminders
+          </Link>
+          <span> </span>
+          <span> </span>
+          example
+        </p>
       </header>
     </div>
   );
