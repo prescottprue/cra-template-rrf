@@ -25,7 +25,6 @@ function LoginForm({ onSubmit }) {
               validate={validateEmail}
               className="input-field"
               margin="normal"
-              fullWidth
             />
           </label>
           <label className="label-class" htmlFor="password">
@@ -35,7 +34,6 @@ function LoginForm({ onSubmit }) {
               name="password"
               className="input-field"
               margin="normal"
-              fullWidth
             />
           </label>
           <div>

@@ -21,13 +21,22 @@ Button.defaultProps = {
   style: {},
   type: 'button',
   disabled: false,
+  children: '',
 };
 
 Button.propTypes = {
-  style: PropTypes.objectOf({}),
+  style: PropTypes.oneOfType([
+    PropTypes.objectOf(PropTypes.object),
+    PropTypes.objectOf(PropTypes.string),
+    PropTypes.objectOf(PropTypes.number),
+  ]),
   type: PropTypes.string,
   disabled: PropTypes.bool,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
 };
 
 export default Button;

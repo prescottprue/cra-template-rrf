@@ -1,5 +1,3 @@
-// import React from 'react';
-// import { Route } from 'react-router-dom';
 import { connectedRouterRedirect } from 'redux-auth-wrapper/history4/redirect';
 import locationHelperBuilder from 'redux-auth-wrapper/history4/locationHelper';
 import { createBrowserHistory } from 'history';
@@ -30,10 +28,6 @@ export const UserIsAuthenticated = connectedRouterRedirect({
   redirectAction: newLoc => () => {
     // Use push, replace, and go to navigate around.
     history.push(newLoc);
-    // dispatch({
-    //   type: UNAUTHED_REDIRECT,
-    //   payload: { message: 'User is not authenticated.' },
-    // });
   },
 });
 
@@ -58,10 +52,6 @@ export const UserIsNotAuthenticated = connectedRouterRedirect({
   redirectAction: newLoc => () => {
     // Use push, replace, and go to navigate around.
     history.push(newLoc);
-    // dispatch({
-    //   type: AUTHED_REDIRECT,
-    //   payload: { message: 'User is not authenticated.' },
-    // });
   },
 });
 
