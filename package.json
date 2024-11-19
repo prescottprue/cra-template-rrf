@@ -26,7 +26,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "firebase": "^7.1.0",
+    "firebase": "^10.9.0",
     "formik": "^2.1.1",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
